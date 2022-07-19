@@ -1,7 +1,7 @@
 source("code.R")
 
 N <- 23
-set.seed(Sys.getenv('SEED'), kind = "Mersenne-Twister", normal.kind = "Inversion")
+set.seed(as.integer(Sys.getenv('SEED')), kind = "Mersenne-Twister", normal.kind = "Inversion")
 
 for( i in c(FALSE, TRUE)){
   grupo <- sample(1:365,size = N,replace = TRUE )
